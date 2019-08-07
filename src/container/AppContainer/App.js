@@ -1,5 +1,5 @@
 import React from 'react';
-import Order from '../component/Order'
+import Order from '../../component/Order'
 import './App.css';
 
 function App() {
