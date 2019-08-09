@@ -12,7 +12,6 @@ export default class Order extends Component {
 
   render() {
     const { orders } = this.props
-    console.log(orders)
     return (
       <div>
         This is order component
@@ -22,7 +21,7 @@ export default class Order extends Component {
           {KeyMapping[KIWI[0]]}
         </p>
         <ol>
-          {orders.map(order => {
+          {orders.toJS().map(order => {
             return <li key={order.id}>{order.name}</li>
           })}
         </ol>

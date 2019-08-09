@@ -1,13 +1,14 @@
-const initialState = {
-    orders: [],
-}
+import { fromJS } from "immutable";
+
+const initialState = fromJS({
+    orders: fromJS([]),
+})
 
 function getOrdersReducer(state = initialState, action) {
     switch (action.type) {
         case 'GET_ORDERS_SUCCESS':
             {
-                state = Object.assign({}, state, { orders: action.orders });
-                return state
+                return state.set('orders', fromJS(action.orders))
             }
 
         default:
